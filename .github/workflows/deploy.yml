@@ -23,7 +23,6 @@ jobs:
           distribution: temurin
           java-version: '21'
       - run: mvn test -q
-        working-directory: a_sp2
 
   security:
     name: Security Scan
@@ -198,4 +197,3 @@ jobs:
     steps:
       - name: Wait for app to be healthy
         run: |
-          for i in $(seq 1 12); do
